@@ -1,11 +1,13 @@
 package ArrayList;
 
+
 public class ArrayList {
+    static Integer INITIAL_SIZE = 5;
     private String[] values;
     private Integer size;
 
-    public ArrayList(Integer size) {
-        this.values = new String[size];
+    public ArrayList() {
+        this.values = new String[INITIAL_SIZE];
         this.size = 0;
     }
 

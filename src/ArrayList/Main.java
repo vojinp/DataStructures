@@ -2,7 +2,7 @@ package ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList list = new ArrayList(5);
+        ArrayList list = new ArrayList();
         list.print();
 
         System.out.println();
