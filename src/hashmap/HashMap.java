@@ -8,7 +8,9 @@ public class HashMap {
 
     public HashMap() {
         this.values = new LinkedList[INITIAL_SIZE];
-        Arrays.fill(this.values, new LinkedList());
+        for (int i = 0; i < values.length; i++) {
+            values[i] = new LinkedList();
+        }
     }
 
     public void put(Integer key, String value) {
@@ -18,12 +20,13 @@ public class HashMap {
         Node tempNode = list.getRoot();
 
         if (tempNode == null) {
-            values[key.hashCode() % 5].add(new Node(value, key));
+            list.add(new Node(value, key));
             return;
         }
 
         if (tempNode.getKey().hashCode() == keyHash && tempNode.getKey().equals(key)) {
             list.setRoot(new Node(value, key));
+            return;
         }
 
         while(tempNode.getNext() != null){
@@ -33,7 +36,7 @@ public class HashMap {
             tempNode = tempNode.getNext();
         }
 
-        values[key.hashCode() % 5].add(new Node(value, key));
+        list.add(new Node(value, key));
     }
 
     public Node get(Integer key) {

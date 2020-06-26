@@ -55,6 +55,7 @@ public class LinkedList {
     public void print() {
         if (root == null) {
             System.out.println("List is empty");
+            return;
         }
 
         Node tempNode = root;

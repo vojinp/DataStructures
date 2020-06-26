@@ -1,4 +1,5 @@
-package linkedlist;
+package hashset;
+
 
 public class LinkedList {
     private Node root;
