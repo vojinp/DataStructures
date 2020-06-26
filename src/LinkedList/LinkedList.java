@@ -17,7 +17,7 @@ public class LinkedList {
 
     public void delete(Node node) {
         Node tempNode = root;
-        if (tempNode == node) {
+        if (tempNode.equals(node)) {
             root = tempNode.getNext();
             return;
         }
